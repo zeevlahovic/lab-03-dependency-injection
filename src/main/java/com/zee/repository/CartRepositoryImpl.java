@@ -1,8 +1,10 @@
-package com.cydeo.repository;
+package com.zee.repository;
 
 
-import com.cydeo.model.Product;
+import com.zee.model.Product;
+import org.springframework.stereotype.Component;
 
+@Component
 public class CartRepositoryImpl implements CartRepository {
 
     public boolean addCartDatabase(Product product, int quantity) {

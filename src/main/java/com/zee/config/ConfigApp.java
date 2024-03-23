@@ -1,9 +1,9 @@
-package com.cydeo.config;
+package com.zee.config;
 
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-@ComponentScan
+@ComponentScan("com.zee")
 public class ConfigApp {
 }

@@ -1,7 +1,11 @@
-package com.cydeo.service;
+package com.zee.service;
 
-import com.cydeo.model.Product;
+import com.zee.model.Product;
+import lombok.Data;
+import org.springframework.stereotype.Component;
 
+@Component
+@Data
 public class StockServiceImpl implements StockService {
 
     @Override

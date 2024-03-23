@@ -1,17 +1,22 @@
-package com.cydeo.service;
+package com.zee.service;
 
-import com.cydeo.model.Cart;
-import com.cydeo.model.Product;
-import com.cydeo.repository.CartRepository;
+import com.zee.model.Cart;
+import com.zee.model.Product;
+import com.zee.repository.CartRepository;
+import lombok.Data;
+import org.springframework.stereotype.Component;
 
 import java.math.BigDecimal;
 import java.util.HashMap;
 import java.util.Map;
-
+@Component
+@Data
 public class CartServiceImpl implements CartService {
 
     private CartRepository cartRepository;
     private StockService service;
+
+
 
     public Cart addCart(Product product, int quantity) {
 

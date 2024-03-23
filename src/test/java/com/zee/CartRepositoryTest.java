@@ -1,11 +1,8 @@
-package com.cydeo;
+package com.zee;
 
-import com.cydeo.config.ConfigApp;
-import com.cydeo.model.Cart;
-import com.cydeo.model.Product;
-import com.cydeo.repository.CartRepository;
-import com.cydeo.service.CartServiceImpl;
-import com.cydeo.service.StockService;
+import com.zee.config.ConfigApp;
+import com.zee.model.Product;
+import com.zee.repository.CartRepositoryImpl;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -17,24 +14,20 @@ import java.math.BigDecimal;
 
 @RunWith( SpringRunner.class )
 @ContextConfiguration(classes = ConfigApp.class)
-public class CartServiceTest {
+public class CartRepositoryTest {
 
     @Autowired
-    private CartServiceImpl cartService;
-    @Autowired
-    private CartRepository cartRepository;
-    @Autowired
-    private StockService stockService;
-
+    private CartRepositoryImpl cartRepository;
 
     @Test
-    public void addCartTest(){
+    public void shouldAddDatabase(){
         Product product = new Product();
         product.setName("milk");
         product.setPrice(new BigDecimal(12));
         product.setQuantity(3);
         product.setRemainingQuantity(3);
-        Cart cart = cartService.addCart(product, 2);
-        Assert.assertEquals(new BigDecimal(24), cart.getCartTotalAmount());
+
+        Assert.assertTrue(cartRepository.addCartDatabase(product, 2));
     }
+
 }
