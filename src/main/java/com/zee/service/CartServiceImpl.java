@@ -14,8 +14,8 @@ import java.util.Map;
 @AllArgsConstructor
 public class CartServiceImpl implements CartService {
 
-    private CartRepository cartRepository;
-    private StockService service;
+    private final CartRepository cartRepository;
+    private final StockService service;
 
 
 
