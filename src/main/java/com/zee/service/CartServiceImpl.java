@@ -3,6 +3,7 @@ package com.zee.service;
 import com.zee.model.Cart;
 import com.zee.model.Product;
 import com.zee.repository.CartRepository;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import org.springframework.stereotype.Component;
 
@@ -10,7 +11,7 @@ import java.math.BigDecimal;
 import java.util.HashMap;
 import java.util.Map;
 @Component
-@Data
+@AllArgsConstructor
 public class CartServiceImpl implements CartService {
 
     private CartRepository cartRepository;
